@@ -28,7 +28,7 @@
 ![image](https://github.com/valmarfina/bugtrackersystem/assets/62747320/a1ccdab8-2c64-4487-9791-47bea1a2bb73)
 ![image](https://github.com/valmarfina/bugtrackersystem/assets/62747320/99452c1c-1203-4830-b46e-19a64fc5ad95)
 
-# database CFbugtrackingdb
+# database ER diagram CFbugtrackingdb
 ![image](https://github.com/valmarfina/bugtrackersystem/assets/62747320/e504c0fc-5387-47db-b00b-3ef254ad6bab)
 
 # Постскриптум...
