@@ -1,14 +1,13 @@
 /* styles/style.css */
-/* Общие стили для всей страницы */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
     display: flex;
-    justify-content: center; /* Центрируем форму по горизонтали */
-    align-items: center; /* Центрируем форму по вертикали */
-    height: 100vh; /* Высота всего экрана */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   
   .edit-form-container {

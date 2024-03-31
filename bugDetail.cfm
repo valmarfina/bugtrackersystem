@@ -21,8 +21,6 @@
   ORDER BY eh.action_date DESC
 </cfquery>
 
-
-<!-- Получаем текущий статус ошибки -->
 <cfquery name="getCurrentStatus" datasource="CFbugtrackingdb">
   SELECT status
   FROM public.errors
@@ -54,7 +52,6 @@
     function showModal() {
       var currentStatus = document.getElementById('currentStatus').value;
       if (currentStatus === 'Closed') {
-        // Insert "Bug Closed" message and "OK" button
         document.getElementById('modalContent').innerHTML = '<p>Bug Closed</p><button onclick="hideModal();">OK</button>';
         document.getElementById('editModal').style.display = 'block';
       } else {
@@ -122,7 +119,6 @@
               <input type="submit" value="Изменить">
             </form>
           <cfelse>
-            <!-- If status is Closed, show the "Bug Closed" message and "OK" button -->
             <p>Bug Closed</p>
             <button onclick="hideModal();">OK</button>
           </cfif>

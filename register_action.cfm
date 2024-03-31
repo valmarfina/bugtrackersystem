@@ -12,9 +12,9 @@
           WHERE account = <cfqueryparam value="#form.username#" cfsqltype="CF_SQL_VARCHAR">
         </cfquery>
 
-        <!-- Проверяем, вернул ли запрос какие-либо строки -->
+        <!-- вернул ли запрос какие-либо строки -->
         <cfif checkUsername.recordCount eq 0>
-          <!-- Если записей нет, значит username свободен, и мы можем продолжить регистрацию -->
+          <!--  записей нет, значит username свободен, и мы можем продолжить регистрацию -->
           <cfquery datasource="CFbugtrackingdb">
             INSERT INTO public.users (account, first_name, last_name, password_hash)
             VALUES (
@@ -27,22 +27,22 @@
           <cfset session.errorMessage = "Вы успешно зарегестрированы в систему!">
           <cflocation url="index.cfm?status=success" addtoken="no">
         <cfelse>
-          <!-- Если запись с таким username уже есть, выводим сообщение об ошибке -->
+          <!--  запись с таким username уже есть, выводим сообщение об ошибке -->
           <cfset session.errorMessage = "Ошибка при регистрации: Username уже занят.">
           <cflocation url="register.cfm" addtoken="no">
         </cfif>
       <cfelse>
-        <!-- Если username невалиден, выводим сообщение об ошибке -->
+        <!--  username невалиден -->
         <cfset session.errorMessage = "Ошибка регистрации: Username должен содержать только английские буквы, цифры и нижнее подчеркивание">
         <cflocation url="register.cfm" addtoken="no">
       </cfif>
     <cfelse>
-      <!-- Если имя или фамилия не валидны, выводим сообщение об ошибке -->
+      <!-- имя или фамилия не валидны-->
       <cfset session.errorMessage = "Ошибка регистрации: Имя и фамилия должны содержать только буквы.">
       <cflocation url="register.cfm" addtoken="no">
     </cfif>
   <cfelse>
-    <!-- Если одно из полей пусто, выводим сообщение об ошибке -->
+    <!-- одно из полей пусто -->
     <cfset session.errorMessage = "Ошибка регистрации: Все поля должны быть заполнены">
     <cflocation url="register.cfm" addtoken="no">
   </cfif>
