@@ -1,0 +1,92 @@
+/* styles/index.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.login-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px; /* Фиксированная ширина может улучшить внешний вид */
+}
+h2 {
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: calc(100% - 20px); /* Вычитаем padding */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login-button.main-action {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px; /* Добавляем небольшой отступ между кнопками */
+  border: none;
+  border-radius: 4px;
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.login-button.secondary-action {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f4f4f4; /* Светлый фон */
+  color: #333; /* Темный текст */
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.login-button.secondary-action:hover {
+  background-color: #e2e2e2; /* Чуть темнее при наведении */
+}
+
+.registration-link {
+  display: block; /* Сделать ссылку блочным элементом */
+  text-align: center; /* Центрировать текст */
+  margin-top: 15px; /* Добавить отступ сверху */
+  font-size: 0.8em; /* Меньший размер шрифта */
+  color: #666; /* Более тусклый цвет текста */
+  text-decoration: none; /* Убрать подчеркивание */
+  transition: color 0.3s; /* Плавное изменение цвета при наведении */
+}
+
+.registration-link:hover {
+  color: #888; /* Цвет текста при наведении */
+}
+
+.site-footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f2f2f2;
+  position: fixed; /* фиксированное положение */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* тень, чтобы выделить подвал */
+}
+
+.site-footer p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  color: #666;
+}

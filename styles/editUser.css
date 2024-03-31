@@ -1,0 +1,180 @@
+/* styles/style.css */
+/* Общие стили для всей страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Центрируем форму по горизонтали */
+    align-items: center; /* Центрируем форму по вертикали */
+    height: 100vh; /* Высота всего экрана */
+  }
+  
+  .edit-form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+  }
+  
+  /* Стили для формы редактирования */
+  .edit-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-form-container label {
+    margin-bottom: 5px;
+  }
+  
+  .edit-form-container input,
+  .edit-form-container select,
+  .edit-form-container textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Кнопка сохранения изменений */
+  .edit-form-container input[type="submit"] {
+    background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s;
+  }
+  
+  .edit-form-container input[type="submit"]:hover {
+    opacity: 0.9;
+  }
+  
+.user-menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.user-name {
+cursor: pointer;
+color: #ff758c;
+background-color: #fff; 
+padding: 10px;
+border-radius: 4px;
+display: inline-block;
+}
+
+.user-actions {
+display: none;
+position: absolute;
+top: 100%;
+right: 0;
+background-color: #fff;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.user-actions a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.user-actions a:hover {
+background-color: #f1f1f1;
+}
+
+.user-menu:hover .user-actions {
+display: block;
+}
+
+.user-actions {
+transition: opacity 10ms ease-in-out;
+opacity: 0;
+}
+
+.user-menu:hover .user-actions {
+opacity: 1;
+}
+
+.site-footer {
+text-align: center;
+padding: 10px 0;
+background-color: #f2f2f2;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.site-footer p {
+margin: 0;
+padding: 0;
+font-size: 0.8em;
+color: #666;
+}
+
+.user-actions a[href="editUser.cfm"] {
+color: #ff758c;
+background-color: transparent;
+transition: background-color 0.3s ease-in-out;
+}
+
+.user-actions a[href="editUser.cfm"]:hover {
+background-color: #ff7eb3;
+color: white;
+}
+
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-bar a {
+margin-right: 15px;
+color: #ff758c;
+text-decoration: none;
+padding: 5px 10px;
+}
+
+.navigation-bar a:hover {
+color: #ff759c;
+text-decoration: underline;
+}
+
+.navigation-bar a.active {
+border-bottom: 2px solid #ff758c;
+}
+
+.user-actions .user-action-link {
+  color: #ff758c;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.user-actions .user-action-link:hover {
+  background-color: #ff7eb3;
+  color: white;
+}
+  
